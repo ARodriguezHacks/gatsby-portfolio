@@ -1,9 +1,20 @@
-import React from "react"
+import React from "react";
+//import Landing from "../components/landing";
+import NavBar from "../components/navbar";
+// import About from "../components/about";
+// import Portfolio from "../components/portfolio";
+// import Blog from "../components/blog";
+// import Contact from "../components/contact";
+import Layout from "../components/layout";
+import Section from "../components/section";
 
 export default () => (
-  <div style={{ color: `purple` }}>
-    <h1>Hello Gatsby!</h1>
-    <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
-  </div>
-)
+  <Layout>
+    <NavBar />
+    <Section title="Home" id="home" />
+    <Section title="About" id="about" />
+    <Section title="Portfolio" id="portfolio" />
+    <Section title="Blog" id="blog" />
+    <Section title="Contact" id="contact" />
+  </Layout>
+);
