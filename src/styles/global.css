@@ -44,7 +44,6 @@ body {
 }
 
 #home,
-#about,
 #portfolio,
 #contact,
 #blog {
@@ -59,13 +58,26 @@ body {
   width: fit-content;
   top: 40%;
   margin: 0 auto;
+  text-align: center;
 }
 #about {
   background-color: lightseagreen;
+  height: auto;
 }
-
+.about-title {
+  text-align: center;
+}
+.about-img-container {
+  text-align: center;
+}
+.about-two-fifths {
+  padding: 0.5rem;
+}
 #portfolio {
   background-color: orangered;
+}
+.portfolio-content {
+  text-align: center;
 }
 #blog {
   background-color: rgb(116, 31, 101);
@@ -80,7 +92,15 @@ body {
 @media only screen and (min-width: 768px) {
   #about .about-content {
     display: flex;
-    height: inherit;
+    height: 100vh;
+  }
+  .about-heading {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .about-title {
+    width: 40%;
+    text-align: center;
   }
   .about-two-fifths {
     width: 40%;
@@ -97,5 +117,22 @@ body {
     height: inherit;
     justify-content: space-evenly;
     align-items: center;
+  }
+  #portfolio {
+    height: auto;
+  }
+  .portfolio-content {
+    max-width: 915px;
+    margin: auto;
+    padding: 5% 0;
+  }
+  #portfolio .portfolio-content {
+    display: flex;
+    height: inherit;
+    flex-wrap: wrap;
+  }
+  .portfolio-item {
+    flex: 1 0 30%;
+    text-align: center;
   }
 }
