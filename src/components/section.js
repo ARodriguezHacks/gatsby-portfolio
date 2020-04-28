@@ -2,8 +2,8 @@ import React from "react";
 
 export default ({ title, id }) => {
   return (
-    <div>
-      <div className="section-content" id={id}>
+    <div id={id}>
+      <div className="section-content">
         <h1>{title}</h1>
       </div>
     </div>

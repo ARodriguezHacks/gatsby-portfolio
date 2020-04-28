@@ -1,9 +1,13 @@
 import React from "react";
+import Navbar from "./navbar";
 
-const Layout = ({ children }) => (
-  <div style={{ margin: `0px auto`, maxWidth: 1200, padding: `0px 1rem` }}>
-    {children}
-  </div>
-);
+const Layout = ({ children }) => {
+  return (
+    <React.Fragment>
+      <Navbar />
+      <div>{children}</div>
+    </React.Fragment>
+  );
+};
 
 export default Layout;
