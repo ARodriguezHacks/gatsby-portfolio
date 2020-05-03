@@ -44,7 +44,6 @@ body {
 }
 
 #home,
-#portfolio,
 #contact,
 #blog {
   height: 100vh;
@@ -53,6 +52,7 @@ body {
 #home {
   background-color: rgb(107, 172, 70);
 }
+
 #home .home-content {
   position: relative;
   width: fit-content;
@@ -60,6 +60,7 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
 #about {
   background-color: lightseagreen;
   height: auto;
@@ -73,23 +74,45 @@ body {
 .about-two-fifths {
   padding: 0.5rem;
 }
+
 #portfolio {
   background-color: orangered;
 }
 .portfolio-content {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
+
 #blog {
   background-color: rgb(116, 31, 101);
 }
+
 #contact {
   background-color: rgb(176, 209, 28);
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 768px) {
+  #portfolio {
+    height: auto;
+  }
+  .portfolio-content {
+    max-width: 915px;
+    margin: auto;
+    padding: 5% 0;
+  }
+  #portfolio .portfolio-content {
+    display: flex;
+    height: inherit;
+    flex-wrap: wrap;
+  }
+  .portfolio-item {
+    flex: 1 0 30%;
+    text-align: center;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
   #about .about-content {
     display: flex;
     height: 100vh;
@@ -118,21 +141,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  #portfolio {
-    height: auto;
-  }
-  .portfolio-content {
-    max-width: 915px;
-    margin: auto;
-    padding: 5% 0;
-  }
-  #portfolio .portfolio-content {
-    display: flex;
-    height: inherit;
-    flex-wrap: wrap;
-  }
-  .portfolio-item {
-    flex: 1 0 30%;
-    text-align: center;
+  .about-pic-left,
+  .about-pic-right {
+    max-width: 48%;
   }
 }

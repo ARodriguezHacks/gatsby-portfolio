@@ -10,8 +10,16 @@ export default ({ title, id }) => {
         <div className="about-content">
           <div className="about-three-fifths">
             <div className="about-img-container">
-              <img src="https://picsum.photos/300" alt="Random Pic 1" />
-              <img src="https://picsum.photos/300" alt="Random Pic 2" />
+              <img
+                src="https://picsum.photos/300"
+                alt="Random Pic 1"
+                className="about-pic-left"
+              />
+              <img
+                src="https://picsum.photos/300"
+                alt="Random Pic 2"
+                className="about-pic-right"
+              />
             </div>
           </div>
           <div className="about-two-fifths">
