@@ -1,10 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Angie Rodriguez Developer Portfolio",
+    description: "Portfolio and blog website of Angie Rodriguez",
+  },
   plugins: [],
 };

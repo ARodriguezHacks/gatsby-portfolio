@@ -1,12 +1,11 @@
 import React from "react";
-//import { Link } from "gatsby";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-export default props => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+// const scrollToTop = () => {
+//   scroll.scrollToTop();
+// };
 
+export default props => {
   return (
     <nav className="navbar">
       <ul className="nav-items">
