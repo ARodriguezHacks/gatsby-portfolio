@@ -1,11 +1,17 @@
 import React from "react";
-import Navbar from "./navbar";
+import { Helmet } from "react-helmet";
+import useSiteMetadata from "../hooks/user-sitemetadata";
 
 const Layout = ({ children }) => {
+  const { title, description } = useSiteMetadata();
   return (
     <React.Fragment>
-      <Navbar />
-      <div>{children}</div>
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
+      <div className="children">{children}</div>
     </React.Fragment>
   );
 };

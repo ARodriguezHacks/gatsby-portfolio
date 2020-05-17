@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioItem from "./portfolioItem";
+import PortfolioItem from "./portfolio-item";
 
 export default ({ title, id }) => {
   return (
