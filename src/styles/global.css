@@ -76,6 +76,10 @@ body {
 .about-img-container {
   text-align: center;
 }
+.about-img-container img {
+  margin: 0 10px;
+  box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
+}
 .about-two-fifths {
   padding: 0.5rem;
 }
@@ -95,7 +99,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .portfolio-item:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
   z-index: 1;
 }
 .portfolio-item img {
@@ -103,6 +107,7 @@ body {
 }
 figure {
   margin: 0;
+  box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 figcaption {
   background-color: white;
@@ -136,11 +141,10 @@ figcaption > * {
     flex-wrap: wrap;
   }
   .portfolio-item {
-    flex: 1 0 30%;
     text-align: center;
   }
   .portfolio-blog article,
-  .blog-container article {
+  .blog-container .article {
     padding: 20px;
     margin: 20px auto;
     border: 1px solid black;
@@ -148,8 +152,17 @@ figcaption > * {
     max-width: 300px;
     flex: 1 0 35%;
   }
-  .blog-container article {
+  .blog-container .article,
+  .blog-container .current-article {
     max-width: 800px;
+  }
+  .current-article {
+    border: none;
+    margin: 20px auto;
+  }
+  .current-article p {
+    line-height: 1.5rem;
+    margin-bottom: 20px;
   }
   .blog-header {
     display: flex;
@@ -210,4 +223,7 @@ figcaption > * {
   .about-pic-right {
     max-width: 48%;
   }
+  /* .portfolio-item {
+    flex: 1 0 30%;
+  } */
 }

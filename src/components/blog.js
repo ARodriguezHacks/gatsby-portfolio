@@ -9,9 +9,11 @@ export default ({ title, id }) => {
   return (
     <div id={id}>
       <div className="blog-content">
-        <h1>{title}</h1>
-        <p>Read my latest articles</p>
-        <Link to="/blog">Visit Blog</Link>
+        <header>
+          <h1>{title}</h1>
+          <p>Read my latest articles</p>
+          <Link to="/blog">Visit Blog</Link>
+        </header>
         <div className="post-preview-container portfolio-blog">
           {posts.map(post => (
             <PostPreview key={post.slug} post={post} />

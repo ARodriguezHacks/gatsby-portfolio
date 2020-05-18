@@ -5,7 +5,7 @@ export default ({ title, id }) => {
     <div id={id}>
       <div>
         <div className="about-heading">
-          <h3 className="about-title">{title}</h3>
+          <h1 className="about-title">{title}</h1>
         </div>
         <div className="about-content">
           <div className="about-three-fifths">
