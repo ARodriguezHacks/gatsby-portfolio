@@ -106,15 +106,16 @@ body {
   display: flex;
 }
 figure {
-  margin: 0;
+  margin: 0 5px;
   box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 figcaption {
   background-color: white;
   width: 300px;
+  padding: 10px;
 }
 figcaption > * {
-  margin: 0;
+  margin: 10px;
 }
 #blog {
   height: auto;
@@ -131,7 +132,7 @@ figcaption > * {
     height: auto;
   }
   .portfolio-content {
-    max-width: 915px;
+    max-width: 980px;
     margin: auto;
     padding: 5% 0;
   }

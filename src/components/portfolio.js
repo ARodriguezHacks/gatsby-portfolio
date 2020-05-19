@@ -1,6 +1,11 @@
 import React from "react";
 import useProjects from "../hooks/use-projects";
-import Image from "gatsby-image";
+import PortfolioItem from "./portfolio-item";
+
+//test for onClick function
+function openProject() {
+  console.log("hello");
+}
 
 export default ({ title, id }) => {
   const projects = useProjects();
@@ -11,13 +16,11 @@ export default ({ title, id }) => {
         <h1>{title}</h1>
         <div className="portfolio-content">
           {projects.map(project => (
-            <figure key={project.title} className="portfolio-item">
-              <Image fluid={project.image.sharp.fluid} alt={project.title} />
-              <figcaption>
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>
-              </figcaption>
-            </figure>
+            <PortfolioItem
+              key={project.title}
+              project={project}
+              openProject={() => openProject()}
+            />
           ))}
         </div>
       </div>

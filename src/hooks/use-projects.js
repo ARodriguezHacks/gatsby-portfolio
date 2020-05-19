@@ -9,9 +9,10 @@ const useProjects = () => {
             frontmatter {
               title
               description
+              technologies
               image {
                 sharp: childImageSharp {
-                  fluid(maxWidth: 300, maxHeight: 300) {
+                  fluid {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -27,6 +28,7 @@ const useProjects = () => {
     title: post.node.frontmatter.title,
     description: post.node.frontmatter.description,
     image: post.node.frontmatter.image,
+    technologies: post.node.frontmatter.technologies,
   }));
 };
 

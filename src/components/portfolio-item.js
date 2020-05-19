@@ -1,16 +1,20 @@
 import React from "react";
+import Image from "gatsby-image";
 
-export default () => {
+export default ({ project, openProject }) => {
   return (
-    <figure className="portfolio-item">
-      <img
-        src="https://picsum.photos/300"
-        alt="Random Pic 1"
-        className="portfolio-image"
-      />
+    <figure
+      key={project.title}
+      className="portfolio-item"
+      onClick={openProject}
+    >
+      <Image fluid={project.image.sharp.fluid} alt={project.title} />
       <figcaption>
-        <h4>Project Title</h4>
-        <p>Project description</p>
+        <h4>{project.title}</h4>
+        <p>
+          <span>{project.technologies}</span>
+        </p>
+        <p>{project.description}</p>
       </figcaption>
     </figure>
   );

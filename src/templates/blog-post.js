@@ -23,8 +23,12 @@ const PostTemplate = ({ data: { mdx: post } }) => (
       <div className="blog-header">
         <h1>My blog</h1>
         <form>
-          <label>Search articles</label>
-          <input type="text" placeholder="Search for articles" />
+          <label for="search-bar">Search articles</label>
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Search for articles"
+          />
         </form>
       </div>
       <article className="current-article">
