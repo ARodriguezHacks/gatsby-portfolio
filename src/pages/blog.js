@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import BlogNavbar from "../components/blog-navbar";
 import usePosts from "../hooks/use-posts";
@@ -13,20 +14,24 @@ export default () => {
       <BlogNavbar />
       <div className="blog-container">
         <div className="blog-header">
-          <h1>My blog</h1>
-          <form>
+          <h1>Newest Article</h1>
+          {/* <form>
             <label for="search-bar">Search articles</label>
             <input
               type="text"
               id="search-bar"
               placeholder="Search for articles"
             />
-          </form>
+          </form> */}
         </div>
         <NewPostPreview post={firstPost} />
         {posts.map(post => (
           <div className="blog-item" key={post.slug}>
-            <h2>{post.title}</h2>
+            <h2>
+              <Link to={`/${post.slug}`} className="article-link">
+                {post.title}
+              </Link>
+            </h2>
             <p>
               Deserunt velit in minim commodo occaecat id adipisicing dolore
               dolor culpa sit duis. Ad veniam tempor qui aliqua anim ex.

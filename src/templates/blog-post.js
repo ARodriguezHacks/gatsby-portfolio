@@ -19,17 +19,20 @@ export const query = graphql`
 const PostTemplate = ({ data: { mdx: post } }) => (
   <BlogLayout>
     <BlogNavbar />
-    <div class="blog-container">
+    <div className="blog-container">
       <div className="blog-header">
-        <h1>My blog</h1>
-        <form>
+        <div>
+          <h1>Blog</h1>
+          <Link to="/blog">&larr; back to all posts</Link>
+        </div>
+        {/* <form>
           <label for="search-bar">Search articles</label>
           <input
             type="text"
             id="search-bar"
             placeholder="Search for articles"
           />
-        </form>
+        </form> */}
       </div>
       <article className="current-article">
         <h1>{post.frontmatter.title}</h1>

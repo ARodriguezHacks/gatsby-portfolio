@@ -10,6 +10,8 @@ const useProjects = () => {
               title
               description
               technologies
+              github
+              host
               image {
                 sharp: childImageSharp {
                   fluid {
@@ -29,6 +31,8 @@ const useProjects = () => {
     description: post.node.frontmatter.description,
     image: post.node.frontmatter.image,
     technologies: post.node.frontmatter.technologies,
+    github: post.node.frontmatter.github,
+    host: post.node.frontmatter.host,
   }));
 };
 

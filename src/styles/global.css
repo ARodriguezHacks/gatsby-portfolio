@@ -1,5 +1,4 @@
 html {
-  background-color: lavenderblush;
   box-sizing: border-box;
 }
 
@@ -18,7 +17,7 @@ body {
 }
 
 .navbar {
-  background-color: lawngreen;
+  background-color: #932f6d;
   position: sticky;
   height: inherit;
   top: 0px;
@@ -38,6 +37,7 @@ body {
 
 .navbar li {
   list-style: none;
+  color: #f6f2ff;
 }
 
 .nav-item:hover {
@@ -48,14 +48,25 @@ body {
 .nav-item > .active {
   border-bottom: 1px solid #333;
 }
+.blog-nav-items li.active {
+  border-bottom: 1px solid #333;
+}
+.blog-nav-items li a {
+  text-decoration: none;
+  color: #f6f2ff;
+}
+.blog-nav-items li a:hover {
+  border-bottom: 1px solid #333;
+  color: pink;
+  cursor: pointer;
+}
 
-#home,
-#contact {
+#home {
   height: 100vh;
 }
 
 #home {
-  background-color: rgb(107, 172, 70);
+  background-color: #f6f2ff;
 }
 
 #home .home-content {
@@ -67,17 +78,18 @@ body {
 }
 
 #about {
-  background-color: lightseagreen;
+  background-color: #dcccff;
   height: auto;
 }
 .about-title {
+  padding-top: 50px;
   text-align: center;
+  color: #420039;
 }
 .about-img-container {
   text-align: center;
 }
 .about-img-container img {
-  margin: 0 10px;
   box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 .about-two-fifths {
@@ -85,7 +97,12 @@ body {
 }
 
 #portfolio {
-  background-color: orangered;
+  background-color: #f6f2ff;
+}
+.portfolio-title {
+  padding-top: 50px;
+  text-align: center;
+  color: #420039;
 }
 .portfolio-content {
   display: flex;
@@ -98,10 +115,10 @@ body {
   transition-timing-function: ease;
   margin-bottom: 0.5rem;
 }
-.portfolio-item:hover {
+/* .portfolio-item:hover {
   transform: scale(1.2);
   z-index: 1;
-}
+} */
 .portfolio-item img {
   display: flex;
 }
@@ -117,17 +134,107 @@ figcaption {
 figcaption > * {
   margin: 10px;
 }
+
 #blog {
+  background: #dcccff;
   height: auto;
   min-height: 100vh;
-  background-color: rgb(116, 31, 101);
+}
+.blog-content header {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.blog-content header h1 {
+  color: #420039;
+}
+
+.portfolio-blog article,
+.blog-container .article {
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 10px;
+}
+
+.blog-container .article p {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.blog-item {
+  border-bottom: 1px solid lightgray;
+  margin: 20px;
+}
+.blog-item p {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+.blog-item .article-link {
+  text-decoration: none;
+  color: #420039;
+}
+
+.blog-item .article-link:hover {
+  text-decoration: underline;
+  color: turquoise;
+}
+
+.current-article {
+  box-shadow: 0px 12px 32px 1px rgba(0, 0, 255, 0.2);
+  max-width: 800px;
+  margin: 10px;
+  padding: 10px;
+}
+.current-article p {
+  line-height: 1.5rem;
+  margin-bottom: 20px;
 }
 
 #contact {
-  background-color: rgb(176, 209, 28);
+  padding: 50px;
+  text-align: center;
+  background-color: #f6f2ff;
+}
+#contact h1 {
+  color: #420039;
+}
+#contact > h1,
+h4,
+.media-container {
+  margin-bottom: 10px;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.media-container {
+  display: flex;
+  justify-content: space-around;
+}
+.media-container a {
+  text-decoration: none;
+  color: #932f6d;
+}
+.media-container > * {
+  font-size: 50px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.media-container > *:hover {
+  transform: scale(1.2);
 }
 
 @media only screen and (min-width: 768px) {
+  .about-img-container img {
+    margin: 0 10px;
+  }
+
   #portfolio {
     height: auto;
   }
@@ -144,12 +251,18 @@ figcaption > * {
   .portfolio-item {
     text-align: center;
   }
+  .portfolio-item:hover {
+    transform: scale(1.2);
+    z-index: 1;
+  }
   .portfolio-blog article,
   .blog-container .article {
     padding: 20px;
     margin: 20px auto;
-    border: 1px solid black;
     border-radius: 10px;
+    background: white;
+    box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset,
+      0 8px 16px rgba(0, 0, 0, 0.5);
     max-width: 300px;
     flex: 1 0 35%;
   }
@@ -178,12 +291,9 @@ figcaption > * {
   .blog-item {
     max-width: 700px;
     margin: 15px auto;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid lightgray;
   }
-  .blog-item p {
-    line-height: 1.5rem;
-    margin: 1rem 0;
-  }
+
   .post-preview-container {
     display: flex;
     padding: 10px;
@@ -195,14 +305,6 @@ figcaption > * {
   #about .about-content {
     display: flex;
     height: 100vh;
-  }
-  .about-heading {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .about-title {
-    width: 40%;
-    text-align: center;
   }
   .about-two-fifths {
     width: 40%;

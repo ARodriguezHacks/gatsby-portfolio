@@ -1,15 +1,23 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default ({ title, id }) => {
   return (
     <div id={id}>
-      <div className="home-content">
-        <h1>{title}</h1>
-        <h2>Web Developer</h2>
-        <p>
-          I am a front-end developer with a passion for web design and love to
-          create for web and mobile devices.
-        </p>
+      <h1>{title}</h1>
+      <div className="contact-container">
+        <h4>Developed by Angie Rodriguez</h4>
+        <div className="media-container">
+          <a href="mailto:angrodri902@gmail.com">
+            <FontAwesomeIcon icon="envelope" />
+          </a>
+          <a href="https://www.linkedin.com/in/angie-rodriguez-web-developer/">
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          </a>
+          <a href="https://github.com/ARodriguezHacks">
+            <FontAwesomeIcon icon={["fab", "github-square"]} />
+          </a>
+        </div>
       </div>
     </div>
   );
