@@ -8,23 +8,13 @@ export default ({ title, id }) => {
   //console.log(images);
   return (
     <div id={id}>
-      <div>
-        <div className="about-heading">
-          <h1 className="about-title">{title}</h1>
-        </div>
-        <div className="about-content">
-          <div className="about-three-fifths">
-            <div className="about-img-container">
-              <div className="about-img">{imageElem}</div>
-              <ul>
-                <li>Hobby</li>
-                <li>Hobby</li>
-                <li>Hobby</li>
-                <li>Hobby</li>
-              </ul>
-            </div>
-          </div>
-          <div className="about-two-fifths">
+      <div className="about-heading">
+        <h1 className="about-title">{title}</h1>
+      </div>
+      <div className="about-content">
+        <div className="about-container ">
+          <div className="about-img">{imageElem}</div>
+          <div className="about-text">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

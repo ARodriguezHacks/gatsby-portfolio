@@ -15,7 +15,7 @@ library.add(faEnvelope, fab);
 export default () => (
   <Layout>
     <Navbar />
-    <Home title="Home" id="home" />
+    <Home title="Angie Rodriguez" id="home" />
     <About title="About" id="about" />
     <Portfolio title="Portfolio" id="portfolio" />
     <Blog title="Blog" id="blog" />
