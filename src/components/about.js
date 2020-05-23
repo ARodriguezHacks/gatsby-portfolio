@@ -15,8 +15,13 @@ export default ({ title, id }) => {
         <div className="about-content">
           <div className="about-three-fifths">
             <div className="about-img-container">
-              {imageElem}
-              {/* <Image fluid={images.fluid} /> */}
+              <div className="about-img">{imageElem}</div>
+              <ul>
+                <li>Hobby</li>
+                <li>Hobby</li>
+                <li>Hobby</li>
+                <li>Hobby</li>
+              </ul>
             </div>
           </div>
           <div className="about-two-fifths">

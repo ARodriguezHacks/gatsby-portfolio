@@ -1,6 +1,7 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-export default ({ title, id }) => {
+const Home = ({ title, id }) => {
   return (
     <div id={id}>
       <div className="home-content">

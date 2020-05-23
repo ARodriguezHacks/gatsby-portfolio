@@ -92,6 +92,10 @@ body {
 .about-img-container img {
   box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
 }
+.about-img {
+  width: 80%;
+  margin: 0 auto;
+}
 .about-two-fifths {
   padding: 0.5rem;
 }
@@ -307,18 +311,16 @@ h4,
     height: 100vh;
   }
   .about-two-fifths {
-    width: 40%;
+    width: 45%;
     height: inherit;
     border: 1px solid rgb(27, 25, 25);
   }
   .about-three-fifths {
-    width: 60%;
+    width: 55%;
     height: inherit;
     border: 1px solid rgb(27, 25, 25);
   }
   .about-img-container {
-    display: flex;
-    height: inherit;
     justify-content: space-evenly;
     align-items: center;
   }
