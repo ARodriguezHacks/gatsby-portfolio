@@ -1,6 +1,11 @@
 import React from "react";
+import useProfile from "../hooks/image-fragment-01";
+//import Image from "gatsby-image";
 
+//console.log(useProfile);
 export default ({ title, id }) => {
+  const imageElem = useProfile();
+  //console.log(images);
   return (
     <div id={id}>
       <div>
@@ -10,16 +15,8 @@ export default ({ title, id }) => {
         <div className="about-content">
           <div className="about-three-fifths">
             <div className="about-img-container">
-              <img
-                src="https://picsum.photos/250"
-                alt="Random Pic 1"
-                className="about-pic-left"
-              />
-              <img
-                src="https://picsum.photos/250"
-                alt="Random Pic 2"
-                className="about-pic-right"
-              />
+              {imageElem}
+              {/* <Image fluid={images.fluid} /> */}
             </div>
           </div>
           <div className="about-two-fifths">
