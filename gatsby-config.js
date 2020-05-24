@@ -36,5 +36,19 @@ module.exports = {
         path: `${__dirname}/contents/images/`,
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Angie Rodriguez Developer Website",
+        short_name: "Angie Rodriguez Dev",
+        start_url: "/",
+        background_color: "#f6f2ff",
+        theme_color: "#f6f2ff",
+        display: "standalone",
+        icon: "static/images/icon.ico",
+        crossOrigin: "use-credentials",
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };
