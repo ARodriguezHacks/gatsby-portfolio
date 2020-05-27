@@ -5,7 +5,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 //   scroll.scrollToTop();
 // };
 
-export default props => {
+export default () => {
   return (
     <nav className="navbar">
       <ul className="nav-items">

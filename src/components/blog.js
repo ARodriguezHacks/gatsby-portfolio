@@ -8,17 +8,19 @@ export default ({ title, id }) => {
 
   return (
     <div id={id}>
-      <div className="blog-content">
+      <div className="blog-wrapper">
         <header>
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <p>Read my latest articles</p>
           <Link to="/blog">Visit Blog</Link>
         </header>
-        <div className="post-preview-container portfolio-blog">
-          {posts.map(post => (
-            <PostPreview key={post.slug} post={post} />
-          ))}
-        </div>
+        <section className="blog-preview-container">
+          <div className="blog-preview-content">
+            {posts.map(post => (
+              <PostPreview key={post.slug} post={post} />
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

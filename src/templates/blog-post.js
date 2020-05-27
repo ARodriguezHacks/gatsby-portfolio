@@ -9,7 +9,7 @@ export const query = graphql`
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        author
+        date(formatString: "MMMM DD, YYYY")
       }
       body
     }
@@ -20,7 +20,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
   <BlogLayout>
     <BlogNavbar />
     <div className="blog-container">
-      <div className="blog-header">
+      <div className="blog-header-desktop">
         <div>
           <h1>Blog</h1>
           <Link to="/blog">&larr; back to all posts</Link>
@@ -36,7 +36,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
       </div>
       <article className="current-article">
         <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.author}</p>
+        <small>{post.frontmatter.date}</small>
         <MDXRenderer>{post.body}</MDXRenderer>
         <Link to="/blog">&larr; back to all posts</Link>
       </article>

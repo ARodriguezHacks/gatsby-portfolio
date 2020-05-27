@@ -8,7 +8,7 @@ import { Link } from "gatsby";
 export default () => {
   return (
     <nav className="navbar">
-      <ul className="nav-items blog-nav-items">
+      <ul className="nav-items-blog">
         <li className="nav-item">
           <Link to="/">Home</Link>
         </li>

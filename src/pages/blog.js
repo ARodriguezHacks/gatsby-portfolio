@@ -13,7 +13,7 @@ export default () => {
     <Layout>
       <BlogNavbar />
       <div className="blog-container">
-        <div className="blog-header">
+        <div className="blog-header-desktop">
           <h1>Newest Article</h1>
           {/* <form>
             <label for="search-bar">Search articles</label>
@@ -27,11 +27,12 @@ export default () => {
         <NewPostPreview post={firstPost} />
         {posts.map(post => (
           <div className="blog-item" key={post.slug}>
-            <h2>
+            <h3>
               <Link to={`/${post.slug}`} className="article-link">
                 {post.title}
               </Link>
-            </h2>
+            </h3>
+            <small>{post.date}</small>
             <p>
               Deserunt velit in minim commodo occaecat id adipisicing dolore
               dolor culpa sit duis. Ad veniam tempor qui aliqua anim ex.

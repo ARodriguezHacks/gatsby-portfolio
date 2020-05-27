@@ -9,17 +9,19 @@ const usePosts = () => {
             author
             slug
             title
+            date(formatString: "MMMM DD, YYYY")
           }
-          excerpt(pruneLength: 500)
+          excerpt(pruneLength: 300)
         }
       }
     }
   `);
 
   return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
     author: post.frontmatter.author,
     slug: post.frontmatter.slug,
+    title: post.frontmatter.title,
+    date: post.frontmatter.date,
     excerpt: post.excerpt,
   }));
 };

@@ -1,0 +1,37 @@
+#contact {
+  padding: 50px;
+  text-align: center;
+  background-color: #f6f2ff;
+}
+#contact h1 {
+  color: #420039;
+}
+#contact > h1,
+h4,
+.media-container {
+  margin-bottom: 10px;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.media-container {
+  display: flex;
+  justify-content: space-around;
+}
+.media-container a {
+  text-decoration: none;
+  color: #932f6d;
+}
+.media-container > * {
+  font-size: 50px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.media-container > *:hover {
+  transform: scale(1.2);
+}

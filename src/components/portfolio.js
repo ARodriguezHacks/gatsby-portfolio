@@ -9,7 +9,7 @@ export default ({ title, id }) => {
   return (
     <div id={id}>
       <div className="portfolio-wrapper">
-        <h1 className="portfolio-title">{title}</h1>
+        <h2 className="portfolio-title">{title}</h2>
         <div className="portfolio-content">
           {projects.map(project => (
             <PortfolioItem key={project.title} project={project} />

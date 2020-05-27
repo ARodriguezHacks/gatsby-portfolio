@@ -1,0 +1,36 @@
+#portfolio {
+  padding: 50px 0;
+  background-color: #f6f2ff;
+}
+.portfolio-title {
+  text-align: center;
+  color: #420039;
+}
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.portfolio-item {
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item img {
+  display: flex;
+}
+figure {
+  background: white;
+  margin: 0 5px;
+  box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+figcaption {
+  background: white;
+  width: 300px;
+  padding: 10px;
+}
+figcaption > * {
+  margin: 10px;
+}

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default ({ title, id }) => {
   return (
     <div id={id}>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <div className="contact-container">
         <h4>Developed by Angie Rodriguez</h4>
         <div className="media-container">
