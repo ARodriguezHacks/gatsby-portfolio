@@ -4,16 +4,29 @@
   height: auto;
   min-height: 100vh;
 
-  .about-title {
-    text-align: center;
-    color: #420039;
+  .about-text {
+    h3,
+    p,
+    ul {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+
+    .about-toolbox-container {
+      span {
+        display: inline-block;
+        margin: 3%;
+        background: white;
+        border-radius: 6px;
+        padding: 2%;
+      }
+    }
   }
 }
-// .about-title {
-//   padding-top: 50px;
-//   text-align: center;
-//   color: #420039;
-// }
+
 .about-content {
   width: 90%;
   margin: 0 auto;

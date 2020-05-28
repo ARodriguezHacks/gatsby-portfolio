@@ -1,11 +1,12 @@
 #contact {
   padding: 50px;
-  text-align: center;
   background-color: #f6f2ff;
+
+  h4 {
+    text-align: center;
+  }
 }
-#contact h1 {
-  color: #420039;
-}
+
 #contact > h1,
 h4,
 .media-container {

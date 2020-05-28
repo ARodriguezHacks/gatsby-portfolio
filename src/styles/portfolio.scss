@@ -2,10 +2,19 @@
   padding: 50px 0;
   background-color: #f6f2ff;
 }
-.portfolio-title {
-  text-align: center;
-  color: #420039;
+.portfolio-wrapper {
+  .resume-container {
+    width: fit-content;
+    margin: 0 auto;
+
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      border-bottom: 2px solid;
+    }
+  }
 }
+
 .portfolio-content {
   display: flex;
   flex-wrap: wrap;

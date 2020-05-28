@@ -1,0 +1,16 @@
+export default [
+  { skill: "HTML / HTML5" },
+  { skill: "CSS / CSS3" },
+  { skill: "JavaScript / ES6" },
+  { skill: "Ruby / Ruby on Rails" },
+  { skill: "React.js" },
+  { skill: "Gatsby.js" },
+  { skill: "Sass" },
+  { skill: "Bootstrap" },
+  { skill: "Bulma" },
+  { skill: "npm" },
+  { skill: "Webpack" },
+  { skill: "Babel" },
+  { skill: "Git" },
+  { skill: "Github" },
+];

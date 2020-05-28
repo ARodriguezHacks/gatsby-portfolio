@@ -10,9 +10,8 @@ export default ({ title, id }) => {
     <div id={id}>
       <div className="blog-wrapper">
         <header>
-          <h2>{title}</h2>
-          <p>Read my latest articles</p>
-          <Link to="/blog">Visit Blog</Link>
+          <h2 className="section-heading">{title}</h2>
+          <Link to="/blog">Visit Blog &rarr;</Link>
         </header>
         <section className="blog-preview-container">
           <div className="blog-preview-content">
