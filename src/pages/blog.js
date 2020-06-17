@@ -7,7 +7,7 @@ import NewPostPreview from "../components/new-post-preview";
 
 export default () => {
   const posts = usePosts();
-  const firstPost = posts[0];
+  const firstPost = posts[posts.length - 1];
 
   return (
     <Layout>
@@ -33,10 +33,7 @@ export default () => {
               </Link>
             </h3>
             <small>{post.date}</small>
-            <p>
-              Deserunt velit in minim commodo occaecat id adipisicing dolore
-              dolor culpa sit duis. Ad veniam tempor qui aliqua anim ex.
-            </p>
+            <p>{post.excerpt}</p>
           </div>
         ))}
       </div>

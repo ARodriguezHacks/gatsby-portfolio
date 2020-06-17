@@ -4,6 +4,9 @@ import { Link } from "gatsby";
 const PostPreview = ({ post }) => (
   <article>
     <h3>{post.title}</h3>
+    <small>{post.date}</small>
+    <br />
+    <br />
     <p>{post.excerpt}</p>
     <Link to={`/${post.slug}`}>read this post &rarr;</Link>
   </article>

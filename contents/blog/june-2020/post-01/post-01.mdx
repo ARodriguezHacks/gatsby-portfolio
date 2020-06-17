@@ -1,0 +1,24 @@
+---
+title: Redux for Reading List App Intro
+slug: redux-reading-list-app-intro
+author: Angie Rodriguez
+date: 2020-06-17
+---
+
+For the past couple of months I've been splitting my time learning a handful of new technologies and tools. One of these has been Redux, in particular Redux with React. I watched a full playlist by The Net Ninja in which he explains fantasically both React and—to a lesser extent but still a great introduction—Redux. I know that the new addition of React Hooks has probably made Redux not as crucial as before, but I still wanted to learn Redux because I like the idea of having an application's state located in one place (which as they say creates a single source of truth).
+
+I admit that it takes a while to understand how Redux works, but I'm hoping with this app I'm building that I can gain a better appreciation for Redux.
+
+But first of all, let me explain what both React and Redux are.
+
+React is a JavaScript library that makes it easier to create user interfaces through the use of components. React is a front-end library, meaning it doesn't require a database or back-end server. Because of this React is usually paired with other technologies such as Express.js and MongoDB to create a more full-fledged application. React deals with application state through props and state objects in class-based components. Long story short, state can quickly become complicated and easily disorganized the larger a React application becomes.
+
+Enter Redux, another JavaScript library that is a state management system. Redux is meant to solve the issue of application state getting out of hand. Redux is a stand alone npm package that can be used by itself, but is usually paired with other JS frameworks like React or Vue.
+
+That said, the more complicated part about Redux is when you are actually connecting Redux to React. That's why when you work with Redux in a React application you need to install two node packages: `redux` AND `react-redux`.
+
+I'm building a basic reading list app and will use styling from Material-UI. This app will be nothing fancy, it's essentially a CRUD app where users can create a reading list and read, add, update, and delete books from said list. Users will also be able to search for additional books to add with the help of a search form. I will be using a third-party API for the book database, but I am also considering integrating either MongoDB or Firebase in order to create a user authentication feature.
+
+In a future post or posts, I will document how Redux works in my Reading List application and how Redux is working alongside React and other tools to create a functioning application.
+
+Until next time!
