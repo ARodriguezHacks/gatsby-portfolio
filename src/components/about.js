@@ -24,7 +24,7 @@ export default ({ title, id }) => {
             <h3>Technology Toolbox</h3>
             <div className="about-toolbox-container">
               {aboutToolbox.map(skill => (
-                <span>{skill.skill}</span>
+                <span key={skill.id}>{skill.skill}</span>
               ))}
             </div>
           </div>

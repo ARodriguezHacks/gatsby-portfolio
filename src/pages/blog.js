@@ -7,14 +7,11 @@ import NewPostPreview from "../components/new-post-preview";
 
 export default () => {
   const posts = usePosts();
-  const firstPost = posts[posts.length - 1];
-
   return (
     <Layout>
       <BlogNavbar />
       <div className="blog-container">
         <div className="blog-header-desktop">
-          <h1>Newest Article</h1>
           {/* <form>
             <label for="search-bar">Search articles</label>
             <input
@@ -24,7 +21,7 @@ export default () => {
             />
           </form> */}
         </div>
-        <NewPostPreview post={firstPost} />
+
         {posts.map(post => (
           <div className="blog-item" key={post.slug}>
             <h3>
