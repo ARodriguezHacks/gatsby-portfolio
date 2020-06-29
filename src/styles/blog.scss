@@ -17,7 +17,6 @@
   }
   .blog-preview-container {
     article {
-      border-radius: 10px;
       background: white;
       box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset,
         0 8px 16px rgba(0, 0, 0, 0.5);
@@ -27,9 +26,9 @@
       h3 {
         margin-bottom: 20px;
       }
-      p {
-        line-height: 1.5rem;
-      }
+      // p {
+      //   line-height: 1.5rem;
+      // }
     }
   }
 }
@@ -43,10 +42,10 @@
     margin: 10px;
     padding: 20px;
 
-    p {
-      line-height: 1.5rem;
-      margin: 1rem 0;
-    }
+    // p {
+    //   line-height: 1.5rem;
+    //   margin: 1rem 0;
+    // }
   }
 
   .current-article {
@@ -58,10 +57,10 @@
       font-size: 2rem;
     }
 
-    p {
-      line-height: 1.5rem;
-      margin: 1rem 0;
-    }
+    // p {
+    //   line-height: 1.5rem;
+    //   margin: 1rem 0;
+    // }
   }
 }
 

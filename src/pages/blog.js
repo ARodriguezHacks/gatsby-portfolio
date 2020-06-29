@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import BlogNavbar from "../components/blog-navbar";
 import usePosts from "../hooks/use-posts";
-import NewPostPreview from "../components/new-post-preview";
 
 export default () => {
   const posts = usePosts();

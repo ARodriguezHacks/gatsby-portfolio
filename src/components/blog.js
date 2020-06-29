@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import PostPreview from "./post-preview";
-import usePosts from "../hooks/use-posts";
+import usePostsPreview from "../hooks/use-posts-preview";
 
 export default ({ title, id }) => {
-  const posts = usePosts();
+  const posts = usePostsPreview();
 
   return (
     <div id={id}>
