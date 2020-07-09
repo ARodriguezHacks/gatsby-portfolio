@@ -16,7 +16,7 @@
       font-family: $font-header;
       text-transform: uppercase;
       text-shadow: 1px 1px 3px #eeddff66;
-      font-size: 4.25rem;
+      font-size: 3rem;
       color: #222;
     }
 
@@ -25,5 +25,11 @@
       font-size: 24px;
       margin-top: 0.5rem;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .text-box h1 {
+    font-size: 4.25rem;
   }
 }
