@@ -3,7 +3,7 @@ module.exports = {
     title: "Angie Rodriguez - Front End Developer",
     description: "Portfolio and blog website of Angie Rodriguez",
     url: "https://angierodriguez.dev",
-    image: "/images/profile-pic-1.jpg",
+    image: "https://angierodriguez.dev/images/profile-pic-1.jpg",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
