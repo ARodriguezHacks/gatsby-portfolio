@@ -1,0 +1,76 @@
+---
+title: What I Learned Building My First PERN Stack App
+slug: first-pern-stack-app-learnings
+author: Angie Rodriguez
+date: 2021-02-13
+embeddedImages:
+  - blog-post-pern-1.png
+---
+
+A couple of weekends ago, I finally completed and deployed successfully my first PERN Stack app. I followed a freeCodeCamp tutorial on the PERN stack — which stands for Postgres Express React & Node – and managed to host on Heroku a simple CRUD Todo app.
+
+Although there were a few issues along the way, especially during deployment, I came out of the tutorial with some new knowledge:
+
+## The structure of the application matters when deploying to Heroku.
+
+Given this was a full stack application Heroku needs access to a package.json file.
+
+## Using Postgres & Heroku for Development and Production
+
+Some behind-the-scenes work takes place with the Heroku Postgres addon, such as the inclusion of a config variable DATABASE_URL that will be used when the app is in production. Speaking of which, I also learned more about using environment variables, including that the NODE_ENV environment variable comes from Express:
+
+```
+const pool = new Pool( process.env.NODE_ENV === "production" ? proConfig : devConfig );
+```
+
+I actually went through two tutorials for this basic PERN stack project. The first goes over building the actual project, which was a basic CRUD Todo app. The second follows up with how to deploy to Heroku. Though I tried to follow everything to a T, when I finally deployed my own version to Heroku, I still encountered some issues.
+
+The main errors that came up when my app was hosted on Heroku were:
+
+```
+GET https://angie-pern-app-herokuapp.com/todos 503 (Service Unavailable)
+```
+
+and
+
+```
+Unexpected token < in JSON at position 0
+```
+
+These errors, however, were not as helpful as the error I found in the Heroku logs:
+
+```
+FATAL:no pg_hba.conf entry for host ....
+// shortened for simplicity
+```
+
+I can't say for certain, but when setting up my environment variables to connect to the Postgres database, it's highly likely that including a postgres user and password are necessary for the Heroku Postgres addon to work. I say "highly likely" because I initially used a different postgres user, and when I first deployed my app, the Heroku logs hinted at authentication errors.
+
+In lamest terms? Make sure you add in your .env file these environment variables:
+
+1. postgres user that has the necessary permissions for the Heroku addon to work
+
+2. That user's password
+
+Lastly, I also modified the proConfig variable inside my `db.js` file to include the `ssl` key that the freeCodeCamp tutorial did not have:
+
+```
+const proConfig = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+};
+```
+
+According to Heroku: "All Heroku Postgres production databases require using SSL connections to ensure that communications between applications and the database remain secure." A little digging into the Heroku docs led me to add the ssl key to my config variable for production, although they seem to advise [not doing it this way](https://devcenter.heroku.com/articles/heroku-postgresql#heroku-postgres-ssl).
+
+So in the end, I learned a little more about Heroku, especially regarding Node and Postgres, and I had a chance to write more SQL code and see how it is used for a full stack application. I'll need to double-check the right way to deploy to Heroku especially with SSL and other security concerns. But that said, I can't wait to start on my next PERN project!
+
+💛 Angie
+
+---
+
+Link to [Heroku](https://angie-pern-app.herokuapp.com/)
+
+Link to [Github](https://github.com/ARodriguezHacks/pern-todo)

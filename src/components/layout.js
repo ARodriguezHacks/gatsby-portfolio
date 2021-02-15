@@ -1,6 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import useSiteMetadata from "../hooks/user-sitemetadata";
+
+deckDeckGoHighlightElement();
 
 const Layout = ({ children }) => {
   const { title, description, image, url } = useSiteMetadata();
