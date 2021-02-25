@@ -1,0 +1,131 @@
+---
+title: "Ruby Scope and Blocks: A Quick Introduction"
+slug: quick-intro-to-ruby-scopes-blocks
+author: Angie Rodriguez
+date: 2021-02-25
+---
+
+Scope is one of those abstract terms in software development that can best be explained with tangible (and multiple) examples. This article aims to do just that when it comes to scope in the Ruby programming language. Because I've found a lot of similarities while studying JavaScript at the same time, I'll also point out how Ruby scope is actually similar to how it is in JavaScript.
+
+[LaunchSchool.com](https://launchschool.com/books/ruby/read/variables#variablescope) has a great definition of how scope works in Ruby: "A variable's scope determines **where** in a program a variable is available for use. A variable's scope is defined by **where** the variable is initialized or created. In Ruby, variable scope is defined by a block."
+
+Blocks and scope go hand-in-hand with Ruby. While you can't really _see_ a scope, you can usually _tell_ if a block is present.
+
+Before that though, take a look at the following pieces of JavaScript code:
+
+_Sample JavaScript code_
+
+```
+const number = 10;
+
+if (number > 10) {
+  return true;
+} else {
+  return false;
+}
+```
+
+_Another sample JavaScript code, a function declaration_
+
+```
+function sayHello() {
+  console.log("Hello!");
+}
+```
+
+In both examples, the code between the curly braces `{}` are examples of blocks. Although blocks clearly exist in JavaScript, "blocks" the term is not as widely used as it is in Ruby. In fact, blocks are a bigger concept in Ruby, and thus the key to understanding scope is also understanding blocks.
+
+Like in JavaScript, blocks in Ruby are recognizable by the use of curly braces`{}` for single lines of code, or with `do/end` keywords for multiple lines.
+
+_Sample single-line Ruby block_
+
+```
+10.times { puts "Hello!" }
+```
+
+_Sample multiple-line Ruby block_
+
+```
+10.times do
+  puts "Hello!"
+end
+```
+
+Both produce the same result, printing out "Hello!" ten times. They both also have the option to define parameters and pass in arguments. Slightly modifying the above examples:
+
+```
+1.upto(10) { |number| puts "#{number} sheep!" }
+```
+
+or
+
+_Sample multiple-line Ruby block_
+
+```
+1.upto(10) do |number|
+  puts "#{number} sheep!"
+end
+```
+
+The parameter is the variable between the two "pipes" `| |` — in this case `number`— and it represents each iteration of the times method, so both samples will print out:
+
+```
+1 sheep!
+2 sheep!
+3 sheep!
+4 sheep!
+5 sheep!
+6 sheep!
+7 sheep!
+8 sheep!
+9 sheep!
+10 sheep!
+```
+
+Parameters are technically variables being defined to be used within that block. In other words, the `number` parameter can only be accessed inside the block because it was defined _within_ that block.
+
+Because the `number` parameter is not defined outside the block, whenever you try to access it outside the block, a runtime error should occur:
+
+`NameError (undefined local variable or method 'number' for main:Object)`
+
+This is because blocks create a new local scope in Ruby. The parameter `number` was defined in a new local scope — the block scope — but it can't be accessed in the outer scope.
+
+```
+#Outer scope because it's the outermost environment
+area = "Home"
+1.upto(10) do |number|
+#Inner scope because variables are being declared within a block
+  area = "Space"
+  puts "#{number} sheep!"
+end
+
+puts area
+```
+
+In above example, the `area` variable is being assigned a value two times: once in the outer scope and again in an inner block scope. When `area` is assigned to the string "Space", it is overwriting the same named variable declared in the outer scope. So `puts area` in the outer scope will return the value "Space". This is because in Ruby — like in JavaScript — inner scope can access variables initialized in an outer scope, but not the other way around.
+
+Final Quick Note: Blocks `{}` and `do/end` appear all over Ruby, but not every time does that mean a new scope is being created. It's only when a block is part of a method call that a new scope is created. For example, Arrays in Ruby have access to many enumerable methods like `.map`. This map method takes in as an argument a block. However, the following pieces of Ruby code do not create a new block scope despite the appearance of curly braces and the do/end keywords:
+
+`my_hash = {:name => "Angie"}`
+
+This is an example of a hash, which is equivalent to a JavaScript literal object. In JavaScript this would be:
+`const myObject = {name: "Angie"};`
+
+```
+pets_array = ["cat", "dog", "bunny"]
+
+for i in pets_array do
+  pet = "hamster"
+end
+
+puts pet
+#returns "hamster"
+```
+
+This is an example of a Ruby loop. Loops do not create a new scope; therefore, you can access the variable `pet` outside the loop.
+
+There is more to blocks in Ruby than this basic introduction —for instance Procs and Lambdas and the `yield` keyword — but hopefully this article provides a clear explanation as you continue your Ruby programming journey.
+
+Happy learning!
+
+💛 Angie

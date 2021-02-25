@@ -5,7 +5,6 @@ import PortfolioItem from "./portfolio-item";
 
 export default ({ title, id }) => {
   const projects = useProjects();
-  console.log(projects);
 
   return (
     <div id={id}>
