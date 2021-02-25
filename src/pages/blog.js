@@ -28,6 +28,11 @@ export default () => {
                 {post.title}
               </Link>
             </h3>
+            <br />
+            <button type="button" style={{ display: "block" }}>
+              {post.tags}
+            </button>
+            <br />
             <small>{post.date}</small>
             <p>{post.excerpt}</p>
           </div>

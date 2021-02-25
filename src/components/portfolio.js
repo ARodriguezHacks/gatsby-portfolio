@@ -12,7 +12,7 @@ export default ({ title, id }) => {
         <h2 className="section-heading">{title}</h2>
         <div className="resume-container">
           <a href={pdf} target="_blank" rel="noopener noreferrer">
-            View My Resumé &darr;
+            View My Résumé &darr;
           </a>
         </div>
         <div className="portfolio-content">

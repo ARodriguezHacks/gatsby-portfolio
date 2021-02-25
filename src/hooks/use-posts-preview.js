@@ -13,6 +13,7 @@ const usePostsPreview = () => {
             author
             slug
             title
+            tags
             date(formatString: "MMMM DD, YYYY")
           }
           excerpt(pruneLength: 300)
@@ -26,6 +27,7 @@ const usePostsPreview = () => {
     slug: post.frontmatter.slug,
     title: post.frontmatter.title,
     date: post.frontmatter.date,
+    tags: post.frontmatter.tags,
     excerpt: post.excerpt,
   }));
 };

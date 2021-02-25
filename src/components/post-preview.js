@@ -3,7 +3,12 @@ import { Link } from "gatsby";
 
 const PostPreview = ({ post }) => (
   <article>
-    <h3>{post.title}</h3>
+    <h3>
+      <Link to={`/${post.slug}`}>{post.title}</Link>
+    </h3>
+    <button type="button" style={{ display: "block" }}>
+      {post.tags}
+    </button>
     <small>{post.date}</small>
     <br />
     <br />
