@@ -11,9 +11,16 @@ export default ({ project }) => {
           <span>{project.technologies}</span>
         </p>
         <p>{project.description}</p>
-        <a href={`${project.github}`} target="_blank" rel="noopener noreferrer">
-          Github
-        </a>
+        {project.github && (
+          <a
+            href={`${project.github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+        )}
+
         <a href={`${project.host}`} target="_blank" rel="noopener noreferrer">
           Live
         </a>
