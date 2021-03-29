@@ -1,5 +1,5 @@
 import React from "react";
-import pdf from "../pdf/ANGIE_RODRIGUEZ_RESUME_DEVELOPER_2021.pdf";
+import pdf from "../pdf/ANGIE_RODRIGUEZ_SOFTWARE_ENGINEER.pdf";
 import useProjects from "../hooks/use-projects";
 import PortfolioItem from "./portfolio-item";
 
