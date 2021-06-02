@@ -1,5 +1,5 @@
 import React from "react";
-import pdf from "../pdf/ANGIE_RODRIGUEZ_SOFTWARE_ENGINEER.pdf";
+import pdf from "../pdf/AngieRodriguezResume.pdf";
 import useProjects from "../hooks/use-projects";
 import PortfolioItem from "./portfolio-item";
 
@@ -12,7 +12,7 @@ export default ({ title, id }) => {
         <h2 className="section-heading">{title}</h2>
         <div className="resume-container">
           <a href={pdf} target="_blank" rel="noopener noreferrer">
-            View My Résumé &darr;
+            View My Resumé &darr;
           </a>
         </div>
         <div className="portfolio-content">

@@ -11,7 +11,7 @@ export default ({ title, id }) => {
           <a href="mailto:angrodri902@gmail.com">
             <FontAwesomeIcon icon="envelope" />
           </a>
-          <a href="https://www.linkedin.com/in/angie-rodriguez-software-developer/">
+          <a href="https://www.linkedin.com/in/angierodriguezdev/">
             <FontAwesomeIcon icon={["fab", "linkedin"]} />
           </a>
           <a href="https://github.com/ARodriguezHacks">

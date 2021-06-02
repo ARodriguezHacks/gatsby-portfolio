@@ -24,7 +24,7 @@ const Home = ({ title, id }) => {
     >
       <div className="text-box">
         <h1>{title}</h1>
-        <h2>Front-End Developer</h2>
+        <h2>Front-End Developer | Software Engineer</h2>
       </div>
     </BackgroundImage>
   );

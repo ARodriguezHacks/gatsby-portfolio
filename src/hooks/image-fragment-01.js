@@ -5,7 +5,7 @@ import Image from "gatsby-image";
 const useProfile = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "profile-pic-1.jpg" }) {
+      file(relativePath: { eq: "profile-pic-2021.jpg" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           fluid {

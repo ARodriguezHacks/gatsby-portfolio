@@ -13,7 +13,7 @@ export default ({ title, id }) => {
         <div className="about-container ">
           <div className="about-img">{imageElem}</div>
           <div className="about-text">
-            <h3>I'm a front-end developer based in the Portland, OR area.</h3>
+            <h3>I'm a front end software engineer based in the Portland, OR area.</h3>
             <p>
               I'm passionate about writing clean code—whether it's front-end or
               back-end—and collaborating with fellow developers and designers.
